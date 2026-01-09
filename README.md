@@ -1,12 +1,12 @@
-# Detection-Lab
+Malware Detection Lab
 
 
-## Objective
+Objective
 Detecting Malware using Splunk and Sysmon
 
 The Detection Lab project aimed to establish a controlled environment for simulating and detecting reverse tcp payload. The primary focus was to ingest and analyze logs within a Security Information and Event Management (SIEM) system, generating test telemetry to mimic real-world attack scenarios. This hands-on experience was designed to deepen understanding of network security, attack patterns, and defensive strategies.
 
-### Skills Learned
+Skills Learned
 Detecting malware and understanding logs 
 
 - Advanced understanding of SIEM concepts and practical application.
@@ -15,8 +15,8 @@ Detecting malware and understanding logs
 - Enhanced knowledge of network protocols and security vulnerabilities.
 - Development of critical thinking and problem-solving skills in cybersecurity.
 
-### Tools Used
-Splunk, Nmap, Sysmon windows 10, and kali linux
+Tools Used
+Splunk, Nmap, Sysmon, windows 10, and kali linux
 
 - Security Information and Event Management (SIEM) system for log ingestion and analysis.
 - Network scanning tools (such as nmap) for Scanning newtowrk and looking into the open ports.
@@ -24,12 +24,10 @@ Splunk, Nmap, Sysmon windows 10, and kali linux
 - Windows 10 Target machine generating logs
 - Kali Linux Simulate attacks.
 
-## Steps
+Steps
 Lab photo demonstration.
 
-Example below.
 
-*Ref 1: Network Diagram*
 -Creating the Malware using msfvenom.
 <img src="https://imgur.com/ncgqRFW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
@@ -74,7 +72,7 @@ Example below.
 <br />
 
 
--After running the malware folder, checking it through the cmd by running Netstat -anob to see if the 
+-After running the malware folder, checking it through the cmd by running Netstat -anob. Then The 
 connection is established
 
 <img src="https://imgur.com/L6SZByZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
@@ -83,25 +81,27 @@ connection is established
 
 
 
+-Ingesting the sysmon and creating an index called endpoint 
+-Setting->index->new index-> endpoint->Apps->Search and reporting->index endpoint.
 
 
-<img src="https://imgur.com/ncgqRFW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/Fp16zSS.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 
 
+-Searching for the malware name (Resume.pdf.exe), I found 13 events.
 
-
-<img src="https://imgur.com/ncgqRFW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/yd4OxpT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
 
+-I use process guid in the search menu and found 5 events. I clean up the query and looked into the statistics.
 
 
-
-<img src="https://imgur.com/ncgqRFW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://imgur.com/G9rWjyY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 
